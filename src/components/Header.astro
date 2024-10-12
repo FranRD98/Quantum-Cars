@@ -3,7 +3,7 @@ import Phone from '../../public/icons/Phone.astro';
 import Map from '../../public/icons/Map.astro';
 ---
 
-<header id="landing-header" class="py-3 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-white">
+<header id="landing-header" class="py-3 px-10 flex items-center w-full justify-between z-40 text-black">
     <div class="flex flex-grow basis-0">
         <h2 class="text-2xl font-extrabold">QUANTUM CARS</h2>
     </div>
@@ -23,27 +23,3 @@ import Map from '../../public/icons/Map.astro';
         </a>
     </nav>
 </header>
-
-<script>
-    const $header = document.querySelector('#landing-header') as HTMLElement
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px', // En cuanto se vea el elemento
-        threshold: 0.5 // Porcentaje de visibilidad
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            const { isIntersecting } = entry
-            if (isIntersecting) {
-                const color = entry.target.getAttribute("data-header-color")
-                if (color) {
-                    $header.style.color = color
-                }
-            }
-        })
-    }, observerOptions)
-
-    const $sections = document.querySelectorAll('.landing-section')
-    $sections.forEach((section) => observer.observe(section))
-</script>
