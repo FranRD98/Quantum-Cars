@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import HeroSection from '../components/HeroSection.astro';
+import InfoSection from '../components/InfoSection.astro';
+import BrandSection from '../components/BrandSection.astro';
+import PorscheSection from '../components/PorscheSection.astro';
+import BMWSection from '../components/BMWSection.astro';
+---
+
+<Layout title="Quantum Cars">
+	<Header/>
+
+	<main class="snap-y snap-mandatory relative w-full h-screen overflow-x-hidden scroll-smooth">
+
+		<div class="snap-center">
+			<HeroSection/>
+		</div>
+
+		<div class="snap-center">
+			<InfoSection/>
+		</div>
+
+		<div class="snap-center">
+			<BrandSection/>
+		</div>
+
+		<div class="snap-center">
+			<PorscheSection/>
+		</div>
+
+		<div class="snap-center">
+			<BMWSection/>
+		</div>
+		
+	</main>
+</Layout>
+
+
